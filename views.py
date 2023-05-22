@@ -38,5 +38,6 @@ def logout(request):
 
 
 @login_required()
+@user_level_required('A') # A adalah user level yg boleh mengakses
 def dashboard(request):
     return HttpResponse('halaman dashboard')
